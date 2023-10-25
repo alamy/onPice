@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './style.css'
 import { useEffect, useState } from 'react'
 import { Somando } from '../../hooks/Soma'
+import Usuario from '../../components/Usuario'
 const Home = () => {
 
 
@@ -17,7 +18,7 @@ const Home = () => {
     const [a, setA] = useState()
     const [b, setB] = useState()
     const [c, setC] = useState()
-    const [resultado, setResultado] = useState()
+    const [resultado, setResultado] = useState('alskdaçdlakdsç')
     const [cont, setCont] = useState(10)
     const [pa, setPa] = useState(0)
     const [pg, setPg] = useState(1)
@@ -106,6 +107,15 @@ useEffect(() => {
         <br />
         {pg}
         <br />
+
+        <Usuario 
+            nome={'alamy'} 
+            email={'alamy@alamy.com'}
+            telefone={'81 999999999'}
+        />
+
+
+
     <button disabled={flagButton} onClick={calculando}>clicar</button>
 
 <br />
