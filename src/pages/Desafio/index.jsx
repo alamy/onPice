@@ -57,6 +57,8 @@ const Desafio = () => {
                 if( ingresso <= qtdTotal){
                     setQtdTotal(qtdTotal - ingresso)
                     setValorTotal((ingresso * 25) + valorTotal)
+                    // Adicionando no array os CPF´s
+                    //Aqui tem um filter
                     setListaCPF(prev => [...prev, cpf])
                 }else {
                     alert('A quantidade de ingressos para compra é: ' + qtdTotal)
