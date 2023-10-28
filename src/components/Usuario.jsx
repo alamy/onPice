@@ -2,6 +2,7 @@
 
 const Usuario = ({ nome, email, telefone }) => {
 
+    console.log(nome)
     // const user = useContext();;
     return (
         <>

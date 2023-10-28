@@ -5,7 +5,6 @@ import { Somando } from '../../hooks/Soma'
 import Usuario from '../../components/Usuario'
 const Home = () => {
 
-
     const [datatual, setDataAtual] = useState(new Date())
     let dia = datatual.getDate()
     let mes = datatual.getMonth() + 1
