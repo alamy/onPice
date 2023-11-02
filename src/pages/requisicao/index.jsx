@@ -1,63 +1,53 @@
 import { useState } from "react";
-import axios from  'axios'
-import { ConsultandoPokemonName } from '../../service/pokemonService'
+import axios from 'axios'
+import { RickMorty } from '../../service/pokemonService'
+import { wait } from "@testing-library/user-event/dist/utils";
 
 const Requisicao = () => {
 
-const [texto, setTexto] = useState()
-const [id, setId] = useState()
+    const [texto, setTexto] = useState()
+    const [id, setId] = useState()
+    const [personagem, setPersonagem] = useState([])
 
-const [pokemon, setPokemon] = useState('')
-
-// const Consultando = async () => {
-//     let status
-//     await axios.get('https://api.adviceslip.com/advice')
-
-//     .then(function (response) {
-//         // manipula o sucesso da requisição
-//         setTexto(response.data.slip.advice)
-//         setId(response.data.slip.id)
-//         status = response.status
-//         // console.log(response.status);
-//     })
-//     .catch(function (error) {
-//         // manipula erros da requisição
-//         console.error(error);
-//     })
-//     .finally(function (response) {
-//         console.log(status)
-//           if(status === 200) {
-//               alert('alguma sucesso ')
-//           }else (
-//               alert('error')
-//           )
-       
-//     });
-
-// }
+    const [pokemon, setPokemon] = useState('')
 
 
+    const ConsultandoPersonagem = async () => {
+        const response = await RickMorty('character')
+        console.log(response)
+        const per = response.data.results.map(function (e) {
+            return <p>{e.name}</p>
+        })
+        setPersonagem(per)
 
-const ConsultandoPokemon = async () => {
-    const response = await ConsultandoPokemonName(pokemon)
-    console.log(response)
-    setTexto(response.data.order)
-    setId(response.data.sprites.front_default)
+    }
 
-}
+    const ConsultandoLocal = async () => {
+        const response = await RickMorty('location')
+        console.log(response)
 
-       
+    }
+
+    const ConsultandoEpisodio = async () => {
+        const response = await RickMorty('episode')
+        console.log(response)
+
+    }
+
+
     return (
         <>
             <p> Teste</p>
-           
-        <hr></hr>
+
+            <hr></hr>
             <output>{texto}</output>
-           <img src={id} alt="teste" />
+            <img src={id} alt="teste" />
 
-            <input type="text" value={pokemon} onChange={(e)=> setPokemon(e.target.value)} />
+            <button onClick={ConsultandoPersonagem}>Personagem</button>
+            <button onClick={ConsultandoLocal}>Local</button>
+            <button onClick={ConsultandoEpisodio}>Episodio</button>
 
-            <button onClick={ConsultandoPokemon}>Consultar Pokemon</button>
+            {personagem}
         </>
     )
 }

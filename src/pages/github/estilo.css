@@ -1,0 +1,56 @@
+.body{
+    width: 100vw;
+    height: 90vh;
+    padding-top: 10vh;
+    background: #cecece;
+}
+
+.form {
+    width: 80%;
+    height: 10%;
+    padding-top: 4%;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px #000;
+    margin: 0 auto;
+}
+
+.input-text {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border:1px solid rgb(149, 149, 241);
+    height: 20px;
+}
+.usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.btn-pesquisar {
+    width: 25%;
+    background-color: aqua;
+    border: none;
+    height: 23px;
+    font-weight: bold;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

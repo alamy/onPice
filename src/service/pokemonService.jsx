@@ -1,7 +1,7 @@
 import api from './api'
 
-export const ConsultandoPokemonName = (name) => {
-    const response = api.get(name).then( function(response){
+export const RickMorty = (name) => {
+    const response = api.get(name).then(function(response){
         return response
         }  
     )

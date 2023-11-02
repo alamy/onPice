@@ -1,9 +1,10 @@
 import axios from  'axios'
 
 const opition = {
-    baseURL: 'https://pokeapi.co/api/v2/pokemon/'
+    // baseURL: 'https://rickandmortyapi.com/api/'
+    baseURL: 'https://api.github.com/users/'
 }
 
-const api = axios.create(opition)
+ const api = axios.create(opition)
 
-export default api
+ export default api

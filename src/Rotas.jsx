@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Sobre from "./pages/Sobre"
 import Desafio from "./pages/Desafio"
 import Requisicao from "./pages/requisicao"
+import Github from "./pages/github"
 
 const Rotas = () => {
 
@@ -13,6 +14,7 @@ const Rotas = () => {
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/desafio" element={<Desafio />} />
                 <Route path="/req" element={<Requisicao />} />
+                <Route path="/github" element={<Github/>} />
             </Routes>
         </BrowserRouter>
     )
